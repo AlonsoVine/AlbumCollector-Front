@@ -5,5 +5,5 @@ import { Component } from '@angular/core'
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  title: string = 'App Angular Spring';
+  title: string = 'Album Collector';
 }
