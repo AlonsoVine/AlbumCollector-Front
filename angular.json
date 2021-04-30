@@ -53,7 +53,6 @@
               "budgets": [
                 {
                   "type": "initial",
-<<<<<<< HEAD
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 },
@@ -61,15 +60,6 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
-=======
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
->>>>>>> 20dde4ce719caffd533f7a3d82575525c63ea42d
                 }
               ]
             }
@@ -78,30 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "hola-mundo:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "hola-mundo:build:production"
-=======
             "browserTarget": "AlbumCollector-Front:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "AlbumCollector-Front:build:production"
->>>>>>> 20dde4ce719caffd533f7a3d82575525c63ea42d
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "hola-mundo:build"
-=======
             "browserTarget": "AlbumCollector-Front:build"
->>>>>>> 20dde4ce719caffd533f7a3d82575525c63ea42d
           }
         },
         "test": {
@@ -138,28 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-<<<<<<< HEAD
-            "devServerTarget": "hola-mundo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "hola-mundo:serve:production"
-=======
             "devServerTarget": "AlbumCollector-Front:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "AlbumCollector-Front:serve:production"
->>>>>>> 20dde4ce719caffd533f7a3d82575525c63ea42d
             }
           }
         }
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "hola-mundo"
-=======
   "defaultProject": "AlbumCollector-Front"
->>>>>>> 20dde4ce719caffd533f7a3d82575525c63ea42d
 }
