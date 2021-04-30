@@ -1,0 +1,27 @@
+<div class="card border-primary my-3">
+  <div class="card-header">Usuarios</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Usuarios</h5>
+
+    <table class="table table-bordered table-striped">
+
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td> {{ usuario.username }} </td>
+          <td> {{ usuario.nombre }} </td>
+          <td> {{ usuario.email }} </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>

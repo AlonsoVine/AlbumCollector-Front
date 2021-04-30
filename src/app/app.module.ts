@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Permite asociar componentes con rutas URL
 
 import { HttpClientModule } from '@angular/common/http';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 // Para conectar la app Angular con el backend Spring
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     DirectivaComponent,
-    ClientesComponent
+    ClientesComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
