@@ -13,14 +13,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumesComponent } from './albumes/albumes.component';
-import { CartasComponent } from './cartas/cartas.component';
-import { CartaComponent } from './carta/carta.component';
+import { AlbumService } from './albumes/album.service';
+import { PaginaComponent } from './albumes/pagina/pagina.component';
+import { CartaComponent } from './albumes/pagina/carta.component';
+import { SidebarComponent } from './albumes/sidebar/sidebar.component';
 // Para conectar la app Angular con el backend Spring
 
 const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'usuarios', component: UsuariosComponent},
-  {path: 'nuevo-usuario', component: FormNuevoUsuarioComponent}
+  {path: 'nuevo-usuario', component: FormNuevoUsuarioComponent},
+  {path: 'albumes', component: AlbumesComponent}
 ];
 
 @NgModule({
@@ -31,15 +34,20 @@ const routes: Routes = [
     UsuariosComponent,
     FormNuevoUsuarioComponent,
     AlbumesComponent,
-    CartasComponent,
-    CartaComponent
+    PaginaComponent,
+    CartaComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    SidebarModule,
+    RouterModule.forRoot(routes),
   ],
-  providers: [UsuarioService],
+  providers: [
+    UsuarioService,
+    AlbumService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
