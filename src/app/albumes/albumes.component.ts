@@ -10,6 +10,7 @@ export class AlbumesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,0 +1,32 @@
+<!---ng-sidebar-container>
+
+    <ng-sidebar [(opened)]="opened">
+      <p>Sidebar contents</p>
+    </ng-sidebar>
+
+    <div ng-sidebar-content>
+      <button (click)="toggleSidebar()">Toggle sidebar</button>
+    </div>
+
+</ng-sidebar-container-->
+
+<ejs-sidebar id="default-sidebar" #sidebar (open)="open($event)" (close)="close($event)">
+    <div class="title"> Sidebar content</div>
+    <div class="sub-title">
+        Click the button to close the Sidebar.
+    </div>
+    <div class="center-align">
+        <button ejs-button id="close" (click)="closeClick()" class="e-btn close-btn">Close Sidebar</button>
+    </div>
+</ejs-sidebar>
+<div>
+    <div>
+        <div class="title">Main content</div>
+        <div class="sub-title"> Click the button to open/close the Sidebar.
+            <div style="padding:20px" class="center-align">
+                <button ejs-button id="toggle" class="e-btn e-info" (click)="toggleClick()">Toggle Sidebar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
