@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Carta } from './carta';
+import { CartaService } from './carta.service';
 
 @Component({
   selector: 'app-pagina',
@@ -8,11 +12,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaComponent implements OnInit {
 
-  constructor() { }
+  usuario: string;
+  cartas: Carta[];
+
+  constructor(
+    private cartaService: CartaService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+
   }
 
+  buscarCartas () {
+    this.activatedRoute.paramMap.subscribe(params => {
+      let pagina: number = +params.get('page');
+      if (!pagina) {
+        pagina = 0;
+      }
+      this.cartaService.getCartas(this.usuario, pagina).subscribe(response => {
+        this.cartas = response.content as Carta[];
+      })
+    })
+  }
 }
 
 /*

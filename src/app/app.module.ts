@@ -17,13 +17,16 @@ import { AlbumService } from './albumes/album.service';
 import { PaginaComponent } from './albumes/pagina/pagina.component';
 import { CartaComponent } from './albumes/pagina/carta.component';
 import { SidebarComponent } from './albumes/sidebar/sidebar.component';
-// Para conectar la app Angular con el backend Spring
+
+// SERVICIOS
+import { CartaService } from './albumes/pagina/carta.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'nuevo-usuario', component: FormNuevoUsuarioComponent},
-  {path: 'albumes', component: AlbumesComponent}
+  {path: 'albumes', component: AlbumesComponent},
+  {path: 'cartas', component: CartaComponent}
 ];
 
 @NgModule({
@@ -41,12 +44,13 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    SidebarModule,
+    //SidebarModule,
     RouterModule.forRoot(routes),
   ],
   providers: [
     UsuarioService,
-    AlbumService
+    AlbumService,
+    CartaService
   ],
   bootstrap: [AppComponent]
 })
