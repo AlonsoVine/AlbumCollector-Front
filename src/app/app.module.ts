@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioService } from './usuarios/usuario.service';
+import { AlbumesService } from './albumes/albumes.service';
+import { CartaService } from './albumes/carta.service';
 import { FormNuevoUsuarioComponent } from './usuarios/form.nuevo.usuario.component';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -45,7 +47,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
-    UsuarioService
+    UsuarioService,
+    AlbumesService,
+    CartaService
   ],
   bootstrap: [AppComponent]
 })
