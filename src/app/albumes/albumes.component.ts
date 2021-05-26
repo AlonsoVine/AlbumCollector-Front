@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Album } from './album';
 
 @Component({
   selector: 'app-albumes',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./albumes.component.css']
 })
 export class AlbumesComponent implements OnInit {
+  albums: Album[];
 
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
 }

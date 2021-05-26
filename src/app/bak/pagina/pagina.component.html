@@ -1,13 +1,13 @@
-<form class="usuario-buscador" action="index.html" method="post">
+<!---form class="usuario-buscador" action="index.html" method="post">
   <input [(ngModel)]="usuario" type="text" name="usuario" placeholder="Usuario..." class="form-control">
   <button type="submit" class="btn" name="button" (click)="buscarCartas()">Buscar</button>
-</form>
+</form-->
 
 <div class="col">
   <div class="container">
       <div class="row">
           <div class="col" *ngFor="let carta of cartas">
-              <img src="{{carta.image_uris.large}}">
+              <img src="">
           </div>
       </div>
   </div>

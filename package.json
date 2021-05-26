@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "~11.2.8",
     "@angular/router": "~11.2.8",
     "@syncfusion/ej2-angular-navigations": "^19.1.63",
-    "bootstrap-icons": "^1.4.1",
     "ng-sidebar": "^9.4.2",
     "rxjs": "~6.6.0",
     "sidebarjs": "^7.0.0",

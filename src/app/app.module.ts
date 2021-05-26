@@ -13,20 +13,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AlbumesComponent } from './albumes/albumes.component';
-import { AlbumService } from './albumes/album.service';
-import { PaginaComponent } from './albumes/pagina/pagina.component';
-import { CartaComponent } from './albumes/pagina/carta.component';
-import { SidebarComponent } from './albumes/sidebar/sidebar.component';
-
+//import { AlbumService } from './albumes/album.service';
+//import { PaginaComponent } from './albumes/pagina/pagina.component';
+//import { CartaComponent } from './albumes/pagina/carta.component';
+//import { SidebarComponent } from './albumes/sidebar/sidebar.component';
+import { InicioComponent } from './inicio/inicio.component';
 // SERVICIOS
-import { CartaService } from './albumes/pagina/carta.service';
+//import { CartaService } from './albumes/pagina/carta.service';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
+  {path: '', redirectTo: '/inicio', pathMatch: 'full'},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'nuevo-usuario', component: FormNuevoUsuarioComponent},
   {path: 'albumes', component: AlbumesComponent},
-  {path: 'cartas', component: CartaComponent}
+  {path: 'inicio', component: InicioComponent}
 ];
 
 @NgModule({
@@ -37,20 +37,15 @@ const routes: Routes = [
     UsuariosComponent,
     FormNuevoUsuarioComponent,
     AlbumesComponent,
-    PaginaComponent,
-    CartaComponent,
-    SidebarComponent
+    InicioComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    //SidebarModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes)
   ],
   providers: [
-    UsuarioService,
-    AlbumService,
-    CartaService
+    UsuarioService
   ],
   bootstrap: [AppComponent]
 })
