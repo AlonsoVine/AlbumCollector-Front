@@ -32,16 +32,17 @@ export class AlbumesComponent implements OnInit {
       if (!pagina) {
         pagina = 0;
       }
-      
-      this.albumesService.getAlbumes(this.usuario.username, pagina.toString()).subscribe(
-        response => {
-          (this.albums = response.content as Album[]);
-          this.paginador = response;
-      });
+
+      this.obtenerAlbumes(pagina);
     })
   }
 
-
-
+  obtenerAlbumes (pagina: number) {
+    this.albumesService.getAlbumes(this.usuario.username, pagina.toString()).subscribe(
+      response => {
+        this.albums = response.content as Album[];
+        this.paginador = response;
+      });
+  }
 
 }

@@ -9,4 +9,6 @@ export class Carta {
   scryfallId: string;
   scryfallIllustrationId: string;
   scryfallOracleId: string;
+
+  imagenesCarta: Map<string, string>;
 }
