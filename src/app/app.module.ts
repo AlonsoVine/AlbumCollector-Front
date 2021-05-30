@@ -20,11 +20,7 @@ import { AlbumesComponent } from './albumes/albumes.component';
 //import { CartaComponent } from './albumes/pagina/carta.component';
 //import { SidebarComponent } from './albumes/sidebar/sidebar.component';
 import { InicioComponent } from './inicio/inicio.component';
-<<<<<<< HEAD
-import { PaginadorAlbumComponent } from './albumes/paginador-album/paginador-album.component';
-=======
 import { AlbumComponent } from './album/album.component';
->>>>>>> 6d5990444eddfe8d4c3d92d7d4debc2649ba3d4f
 // SERVICIOS
 //import { CartaService } from './albumes/pagina/carta.service';
 
@@ -45,11 +41,7 @@ const routes: Routes = [
     FormNuevoUsuarioComponent,
     AlbumesComponent,
     InicioComponent,
-<<<<<<< HEAD
-    PaginadorAlbumComponent
-=======
     AlbumComponent
->>>>>>> 6d5990444eddfe8d4c3d92d7d4debc2649ba3d4f
   ],
   imports: [
     BrowserModule,
