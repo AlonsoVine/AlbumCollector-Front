@@ -27,6 +27,17 @@ export class CartaService {
     );
   }
 
+  getImagenesCarta(carta: Carta): Observable<any> {
+    let url: string = "https://api.scryfall.com/cards/";
+    return this.http.get(`${url}/${carta.scryfallId}`).pipe(
+      map((response: any) => {
+        carta.imagenesCarta = response.image_uris as Map<string, string>
+      })
+    );
+  }
+
+  
+
 
 
 }

@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioService } from './usuarios/usuario.service';
 import { AlbumesService } from './albumes/albumes.service';
-import { CartaService } from './albumes/carta.service';
+import { CartaService } from './album/carta.service';
 import { FormNuevoUsuarioComponent } from './usuarios/form.nuevo.usuario.component';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -20,6 +20,7 @@ import { AlbumesComponent } from './albumes/albumes.component';
 //import { CartaComponent } from './albumes/pagina/carta.component';
 //import { SidebarComponent } from './albumes/sidebar/sidebar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { AlbumComponent } from './album/album.component';
 // SERVICIOS
 //import { CartaService } from './albumes/pagina/carta.service';
 
@@ -39,7 +40,8 @@ const routes: Routes = [
     UsuariosComponent,
     FormNuevoUsuarioComponent,
     AlbumesComponent,
-    InicioComponent
+    InicioComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
