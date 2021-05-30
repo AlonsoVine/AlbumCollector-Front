@@ -11,6 +11,7 @@ import { Usuario } from '../usuarios/usuario';
   styleUrls: ['./albumes.component.css']
 })
 export class AlbumesComponent implements OnInit {
+  
   id: string;
   usuario: Usuario;
   nombre: string;
@@ -31,14 +32,16 @@ export class AlbumesComponent implements OnInit {
       if (!pagina) {
         pagina = 0;
       }
+      
       this.albumesService.getAlbumes(this.usuario.username, pagina.toString()).subscribe(
-        response => {(this.albums = response.content as Album[]).forEach(
-          album => {this.albumesService.getPagina(album.id, pagina.toString()).subscribe();
-        })
-        this.paginador = response;
+        response => {
+          (this.albums = response.content as Album[]);
+          this.paginador = response;
       });
     })
-
   }
+
+
+
 
 }

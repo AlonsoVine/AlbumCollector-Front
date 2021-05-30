@@ -7,9 +7,10 @@
         </div>
 
         <div class="col-8">
-          <h1>Mis Albumes</h1>
+          <br>
           <br><hr>
 
+          <!---BUSCADOR-->
           <form class="form-inline md-form form-sm">
             <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Nombre de album" aria-label="Search"
               mdbInput>
@@ -19,29 +20,36 @@
                 Buscar
               </button>
           </form>
+
           <br>
+          
+          <!---LISTADOR-->
+          <h1>MIS ALBUMES</h1>
           <div class="container">
             <div class="row">
-              <ul class="listaAlbumes">
-                <!---li *ngFor="let album of albums"-->
-                <div class="col-5">
-                  <li>
-                    <img src="./assets/img/album_collector_img_blue.jpg" class="rounded" width="100%" height="100%">
-                  </li>
-                </div>
-              </ul>
+              <div class="col-12">
+                <div class="alert alert-info mt-3" *ngIf="albums?.length==0 ">No hay ningún album aún, ¿a qué esperas?</div>  
+                <ul class="listaAlbumes" *ngIf="albums?.length>0">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-5">
+                        
+                        <li *ngFor="let album of albums">
+                          <img src="./assets/img/album_collector_img_blue.jpg" class="rounded" width="100%" height="100%">
+                          <div>Name:{{album.nombre}}</div>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
 
-              <div class="col-5">
-                  <img src="./assets/img/album_collector_img_blue.jpg" class="rounded" width="100%" height="100%">
-              </div>
-              <div class="col-2">
-                  <img src="">
-              </div>
-              <div class="col-5">
-                  <img src="./assets/img/album_collector_img_black.jpg" class="rounded" width="100%" height="100%">
+                </ul>
+
               </div>
             </div>
           </div>
+          
+          <!---PAGINADOR-->
+          <app-paginador-album *ngIf="paginador" [paginador] = "paginador"></app-paginador-album>
         </div>
 
         <div class="col-2">

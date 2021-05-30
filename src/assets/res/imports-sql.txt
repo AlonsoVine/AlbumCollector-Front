@@ -1,0 +1,4 @@
+INSERT INTO albums values ("1", "", "albumEpico", "aloloco");
+INSERT INTO albums values ("2", "", "albumEpico2", "aloloco");
+INSERT INTO albums values ("3", "", "albumEpico3", "aloloco");
+INSERT INTO albums values ("4", "", "albumEpico6", "aloloco");

@@ -20,6 +20,7 @@ import { AlbumesComponent } from './albumes/albumes.component';
 //import { CartaComponent } from './albumes/pagina/carta.component';
 //import { SidebarComponent } from './albumes/sidebar/sidebar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PaginadorAlbumComponent } from './albumes/paginador-album/paginador-album.component';
 // SERVICIOS
 //import { CartaService } from './albumes/pagina/carta.service';
 
@@ -39,7 +40,8 @@ const routes: Routes = [
     UsuariosComponent,
     FormNuevoUsuarioComponent,
     AlbumesComponent,
-    InicioComponent
+    InicioComponent,
+    PaginadorAlbumComponent
   ],
   imports: [
     BrowserModule,
